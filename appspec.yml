@@ -2,4 +2,16 @@ version: 0.0
 os: windows
 files:
 -source: /
-destination: C:\FastAPIApp
+ destination: C:\FastAPIApp
+hooks:
+  BeforeInstall:
+   -location:script/stop.ps1
+    timeout:300
+  AfterInstall:
+    -location:scripts/install.ps1
+     timeout:300
+  ApplicationStart:
+    -location:scripts/start.ps1
+     timeout:300
+    
+  
