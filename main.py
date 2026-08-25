@@ -20,3 +20,4 @@ def extract(request: TextRequest):
         "entities": result
     }
     #Entity extraction project
+    #Deveopment branch change
