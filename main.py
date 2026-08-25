@@ -10,7 +10,7 @@ class TextRequest(BaseModel):
 @app.get("/")
 def home():
     return {
-        "message": "Welcome to the Entity Extraction API!"
+        "message": "Welcome to the Entity Extraction API -DEV!"
     }
 
 @app.post("/extract")
@@ -20,3 +20,4 @@ def extract(request: TextRequest):
         "entities": result
     }
     #Entity extraction project
+    #Deveopment branch change
