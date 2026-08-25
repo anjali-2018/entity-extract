@@ -19,3 +19,4 @@ def extract(request: TextRequest):
     return {
         "entities": result
     }
+    #Entity extraction project
