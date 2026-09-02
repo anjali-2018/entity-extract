@@ -10,7 +10,7 @@ class TextRequest(BaseModel):
 @app.get("/")
 def home():
     return {
-        "message": "Welcome to the Entity Extraction API -DEV!"
+        "message": "Welcome to the Entity Extraction API!"
     }
 
 @app.post("/extract")
