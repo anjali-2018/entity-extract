@@ -31,7 +31,8 @@ jobs:
             --comment "Deploy entity-extract Docker app" \
             --parameters 'commands=[
               "cd /home/ec2-user/entity-extract",
-              "git pull origin main",
+              "git fetch origin",
+              "git reset --hard origin/main",
               "docker stop entity-extract-app || true",
               "docker rm entity-extract-app || true",
               "docker build -t entity-extract .",
