@@ -12,6 +12,10 @@ def home():
     return {
         "message": "Welcome to  Entity Extraction  API"
     }
+@app.get("/health")
+    def health():
+    return{"status": "healthy"}
+    
 
 @app.post("/extract")
 def extract(request: TextRequest):
