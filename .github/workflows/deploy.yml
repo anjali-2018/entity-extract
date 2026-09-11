@@ -25,12 +25,14 @@ jobs:
 
       - name: Deploy through SSM
         run: |
+          set -e
           COMMAND_ID=$(aws ssm send-command \
             --instance-ids "${{ secrets.EC2_INSTANCE_ID }}" \
             --document-name "AWS-RunShellScript" \
             --comment "Deploy entity-extract Docker app" \
             --parameters 'commands=[
               "cd /home/ec2-user/entity-extract",
+              "git config --global --add safe.directory /home/ec2-user/entity-extract",
               "git pull origin main",
               "docker stop entity-extract-app || true",
               "docker rm entity-extract-app || true",
