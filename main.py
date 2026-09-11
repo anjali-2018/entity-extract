@@ -13,7 +13,7 @@ def home():
         "message": "Welcome to  Entity Extraction  API"
     }
 @app.get("/health")
-    def health():
+def health():
     return{"status": "healthy"}
     
 
