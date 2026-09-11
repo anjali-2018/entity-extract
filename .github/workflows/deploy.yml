@@ -33,7 +33,7 @@ jobs:
             --parameters 'commands=[
               "set -e",
               "cd /home/ec2-user/entity-extract",
-              "git config --global --add safe.directory /home/ec2-user/entity-extract",
+              "git config --system --add safe.directory /home/ec2-user/entity-extract",
               "git fetch origin",
               "git reset --hard origin/main",
               "docker stop entity-extract-app || true",
