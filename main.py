@@ -14,7 +14,7 @@ def home():
     }
 @app.get("/health")
 def health():
-    return{"status": "healthy"}
+    return{"status": "healthy app"}
     
 
 @app.post("/extract")
